@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="minimo (photo) — a free app for compressing photos directly on your phone.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#f1f2f6">
+    <title>minimo (photo) — lighter photos</title>
+    <link rel="canonical" href="https://minimo-photo.vercel.app/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="minimo (photo)">
+    <meta property="og:title" content="minimo (photo) — lighter photos">
+    <meta property="og:description" content="Compress photos directly on your phone. No cloud uploads. Open source.">
+    <meta property="og:url" content="https://minimo-photo.vercel.app/">
+    <!-- TODD: Update -->
+    <meta property="og:image" content="https://minimo-photo.vercel.app/assets/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="minimo (photo) — lighter photos">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="minimo (photo) — lighter photos">
+    <meta name="twitter:description" content="Compress photos directly on your phone. No cloud uploads. Open source.">
+    <meta name="twitter:image" content="https://minimo-photo.vercel.app/assets/og-image.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
+    <link rel="shortcut icon" href="favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="#" aria-label="minimo (photo), home">
+        <img src="assets/icon.png" alt="" width="44" height="44">
+        <span>minimo (photo)</span>
+      </a>
+      <nav class="top-links" aria-label="Project links">
+        <a class="text-link" href="https://github.com/minimo-pro/minimo_photo">github ↗</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">free · right on your phone</p>
+          <h1>Lighter photos.<br>Moments stay.</h1>
+          <p class="lead">
+            Compress one or several photos, save storage and keep what matters
+            — without uploading your files to the cloud.
+          </p>
+          <p class="development">App is in development</p>
+          <p class="note">Coming to iOS and Android · open source</p>
+        </div>
+        <!-- TODD: Update -->
+        <img class="demo" src="assets/demo.png" alt="A photo enters the phone and comes out compressed">
+      </section>
+
+      <section class="comparison" aria-labelledby="comparison-title">
+        <p class="eyebrow">see the difference</p>
+        <h2 id="comparison-title">Before and After.</h2>
+        <p>Drag the line to compare the 2.3 MB original with the 82 KB result.</p>
+        <div class="comparison-frame" style="--position: 50%">
+          <img src="assets/comparison-before.png" alt="Original photo">
+          <img class="comparison-after" src="assets/comparison-after.jpg" alt="Compressed photo">
+          <span class="comparison-label before-label">before · 2.3 MB</span>
+          <span class="comparison-label after-label">after · 82 KB</span>
+          <span class="comparison-line" aria-hidden="true"><b>↔</b></span>
+          <input type="range" min="0" max="100" value="50" aria-label="Compare before and after">
+        </div>
+      </section>
+
+      <section class="privacy">
+        <img src="assets/icon.png" alt="" width="120" height="120">
+        <div>
+          <p class="eyebrow">your photos stay yours</p>
+          <h2>No cloud. No subscription.</h2>
+          <p>Everything is processed on your device. The app is free and open source.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>minimo (photo)</span>
+      <nav aria-label="Project links">
+        <a href="/privacy">privacy policy</a>
+        <a href="https://github.com/minimo-pro/minimo_photo">source code</a>
+        <a href="mailto:khlebobul@gmail.com">contact</a>
+      </nav>
+    </footer>
+    <script>
+      const comparison = document.querySelector(".comparison-frame");
+      comparison.querySelector("input").addEventListener("input", event => {
+        comparison.style.setProperty("--position", `${event.target.value}%`);
+      });
+    </script>
+  </body>
+</html>
