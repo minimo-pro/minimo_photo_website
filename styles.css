@@ -30,6 +30,16 @@ header { position: relative; z-index: 2; display: flex; align-items: center; jus
 .nav-donate { color: var(--white); background: #d92c2c; white-space: nowrap; }
 .nav-donate:hover { background: #be2424; }
 
+.sister-project { display: flex; align-items: center; gap: 16px; max-width: 760px; margin: 8px auto 0; padding: 14px 18px; color: var(--white); background: var(--red); border-radius: 16px; text-align: left; text-decoration: none; box-shadow: 0 10px 24px #fc363635; transition: transform .2s, background .2s; }
+.sister-project:hover { transform: translateY(-2px); background: #e52e2e; }
+.sister-project-icons { display: flex; flex: 0 0 auto; padding-left: 4px; }
+.sister-project-icons img { width: 40px; height: 40px; border: 2px solid #ffffffb3; border-radius: 12px; box-shadow: 0 3px 8px #8d171733; }
+.sister-project-icons img + img { margin-left: -10px; }
+.sister-project-copy { display: grid; flex: 1; gap: 2px; }
+.sister-project-label { color: #ffe0e0; font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.sister-project-copy strong { font-size: 16px; font-weight: 600; }
+.sister-project-arrow { display: grid; flex: 0 0 38px; place-items: center; width: 38px; height: 38px; background: #ffffff26; border-radius: 12px; font-size: 22px; }
+
 .hero { position: relative; isolation: isolate; padding-top: 74px; text-align: center; }
 .hero::before { content: ""; position: absolute; z-index: -1; top: -130px; bottom: 0; left: calc((100% - 100vw) / 2); width: 100vw; background: linear-gradient(180deg, #25537018, transparent 55%, #f7f8f6 100%), url("assets/sky.jpg") center bottom / cover; }
 .hero-copy { position: relative; z-index: 1; }
@@ -124,6 +134,10 @@ footer a { text-decoration: none; }
   .brand { font-size: 20px; gap: 7px; }
   .brand img { width: 34px; height: 34px; border-radius: 9px; }
   .top-links .text-link, .top-links .nav-cta:not(.nav-donate) { display: none; }
+  .sister-project { gap: 12px; margin-top: 6px; padding: 12px; }
+  .sister-project-icons img { width: 34px; height: 34px; border-radius: 10px; }
+  .sister-project-copy strong { font-size: 14px; }
+  .sister-project-arrow { flex-basis: 32px; width: 32px; height: 32px; }
   .nav-cta { padding: 10px 13px; font-size: 12px; }
   .hero { padding-top: 56px; }
   .hero::before { top: -100px; background-position: center, 62% bottom; }
@@ -166,5 +180,5 @@ footer a { text-decoration: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .store-link, .donate-link { transition: none; }
+  .store-link, .donate-link, .sister-project { transition: none; }
 }
